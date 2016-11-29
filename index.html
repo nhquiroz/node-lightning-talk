@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Node.js – Cómo usar JavaScript en todos lados</title>
+
+		<meta name="description" content="Una introducción muy rápida a Node.js (lightning talk)">
+		<meta name="author" content="Nicolás Quiroz">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+
+		<!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.8.0/styles/atom-one-dark.min.css">
+
+    <!-- Give me some emojis! -->
+    <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+    <!--Add support for earlier versions of Internet Explorer -->
+	  <!--[if lt IE 9]>
+	  <script src="lib/js/html5shiv.js"></script>
+	  <![endif]-->
+	</head>
+	<body>
+		<div class="reveal">
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+				<section>
+					<h1>Node.js</h1>
+					<h3> Cómo usar JavaScript <strong>en todos lados <img src="https://cdn.meme.am/cache/images/folder885/1121885.jpg"/></strong></h3>
+					<p>
+						<small>Nicolás Quiroz / <a href="https://twitter.com/_nhsz">@_nhsz</a></small>
+					</p>
+				</section>
+
+        <section data-transition="slide" data-background="#fff">
+          <section>
+            <h2>Breve repaso histórico</h2>
+            <p class="fragment fade-left"><strong>Mayo de 2009: </strong> Node.js es creado por <span><strong><a href="http://tinyclouds.org/">Ryan Dahl</a></strong><span>.</p>
+              <aside class="notes">
+    						- NPM manager makes it easier for programmers to publish and share source code of Node.js libraries and is designed to simplify installation, updating and uninstallation of libraries.
+                - Due to the internal conflict over Joyent's governance, io.js was created as an open governance alternative with a separate technical committee.
+              </aside>
+  					<p class="fragment fade-left"><strong>8 de Noviembre del 2009: </strong><a href="https://www.youtube.com/embed/ztspvPYybIY">Presentación en la JsConf. <i class="em em-video_camera"></i></a></p>
+            <p class="fragment fade-left"><strong>Enero de 2010: </strong>Nace <span><strong><a href="https://www.npmjs.com/">npm</a></strong></span>, el manejador de paquetes.</p>
+            <p class="fragment fade-left"><strong>Julio de 2011: </strong>Primer release para Windows.</p>
+            <p class="fragment fade-left"><strong>Enero de 2012: </strong>Dahl da un paso al costado. <span><strong><a href="http://izs.me/">Isaac Schlueter</a></strong></span> (compañero de trabajo y creador de <span><strong>npm</strong></span>) se hace cargo.</p>
+            <p class="fragment fade-left"><strong>Enero de 2014: </strong>Timothy J. Fontaine toma el lugar de Isaac.</p>
+          </section>
+          <section>
+            <p><strong>Diciembre de 2014: </strong>Fedor Indutny lanzó <strong><a href="https://iojs.org/">io.js</a></strong>, un fork de Node. Planeaban mantenerlo al día con las últimas features del engine V8 (por ejemplo, ES6).</p>
+            <p class="fragment fade-left"><strong>Febrero de 2015: </strong> Se comienza a discutir la necesidad de formar una fundación neutral para <strong>Node.js</strong>.</p>
+            <p class="fragment fade-left"><strong>Junio de 2015: </strong>Las comunidades de <strong>Node.js</strong> e <strong>io.js</strong> deciden trabajar juntas y nace la <strong><a href="https://nodejs.org/en/foundation/">Node.js Foundation.</a></strong></p>
+            <p class="fragment fade-left"><strong>Septiembre 2015: </strong><strong>Node.js v0.12</strong> e <strong>io.js v3.3</strong> se fusionan en <strong>Node v4.0</strong>. Esta release incluyó soporte para features de ES6 y dió inicio al ciclo de lanzamientos LTS.</p>
+          </section>
+				</section>
+
+        <section>
+					<h2>¿Qué es Node.js?</h2>
+					<p class="fragment fade-left">No es un lenguaje nuevo.</p>
+					<p class="fragment fade-left">No es un framework.</p>
+          <p class="fragment fade-left">No es una <s>librería</s> biblioteca de JavaScript.</p>
+				</section>
+
+        <section>
+          <h2>tl;dr</h2>
+  				<p><i class="em em-computer"></i> Es un <em>entorno de ejecución</em> de <strong>JavaScript</strong> del lado del servidor.</p>
+          <p class="fragment fade-left">Permite ejecutar código JavaScript fuera del browser. <i class="em em-clap"></i></p>
+          <p class="fragment fade-left">Es <strong>Open Source. <i class="em em-smile"></i></strong></p>
+  			</section>
+
+        <section>
+					<p>Según la web oficial (<a href="https://nodejs.org/es/">https://nodejs.org/es/</a>)</p>
+					<blockquote cite="https://nodejs.org/es/">
+						<p>Node.js® es un <strong class=keyword>entorno de ejecución para JavaScript</strong>, construido con el <strong class=keyword>motor de JavaScript V8</strong> de Chrome.</p>
+            <p>Utiliza un modelo de operaciones <strong class=keyword>E/S sin bloqueo</strong> y <strong class=keyword>orientado a eventos</strong>, que lo hace liviano y eficiente.</p>
+            <p>El ecosistema de paquetes de Node.js, <strong class=keyword>npm</strong>, es el ecosistema mas grande de bibliotecas de código abierto en el mundo.</p>
+					</blockquote>
+				</section>
+
+        <section data-background="http://www.reactiongifs.com/r/huh.gif"></section>
+
+        <section>
+          <section>
+            <h2>JavaScript Runtime Environment</h2>
+            <p><strong class="keyword">Entorno de ejecución</strong>, desarrollado en C, C++ y JavaScript.</p>
+            <p>Antes de Node.js, JavaScript sólo podía ejecutarse del lado del cliente.</p>
+          </section>
+          <section>
+            <h2>V8 JavaScript engine</h2>
+            <p><strong class="keyword">Intérprete/compilador de JavaScript</strong> que utiliza Chrome.</p>
+            <p><strong class="keyword">Compila JavaScript a código de máquina nativo</strong>.</p>
+            <aside class="notes">
+              - El aumento de velocidad es importante debido a que V8 compila JavaScript en código de máquina nativo, en lugar de interpretarlo o ejecutarlo como bytecode.
+            </aside>
+          </section>
+          <section>
+            <h2>Event-driven</h2>
+            <p><strong class="keyword">Basado en eventos</strong>.</p>
+            <p>La ejecución del código se realiza de forma asíncrona.</p>
+              <aside class="notes">
+                - El enfoque tradicional para generar código asíncronico es engorroso y crea un espacio en memoria no trivial para un gran número de clientes (cada cliente genera un hilo, y el uso de memoria de cada uno se suma).
+                - Para evitar esta ineficiencia, así como la dificultad conocida de las aplicaciones basadas en hilos, Node.js mantiene un Event Loop que gestiona todas las operaciones asíncronas.
+                - Cuando una aplicación Node.js necesita realizar una operación de bloqueo (operaciones I/O como trabajo con archivos) envía una tarea asíncrona al event loop, junto con un callback, y luego continúa.
+                - Node resuelve este problema cambiando la forma en que se realiza una conexión con el servidor.
+                - En lugar de generar un nuevo hilo de OS para cada conexión (y de asignarle la memoria acompañante), cada conexión dispara una ejecución de evento dentro del proceso del motor de Node.
+                - Node también afirma que nunca se quedará en punto muerto, porque no se permiten bloqueos y porque no se bloquea directamente para llamados E/S.
+                - Su meta es permitir a un programador construir aplicaciones altamente escalables y escribir código que maneje decenas de miles de conexiones simultáneas en una sólo una máquina física.
+              </aside>
+          </section>
+          <section>
+            <h2>Non-blocking I/O</h2>
+            <p>Completar.</p>
+          </section>
+          <section>
+            <h2>Single-threaded</h2>
+            <p>Corre en un <strong class="keyword">único hilo de ejecución</strong>.</p>
+          </section>
+        </section>
+
+<!-- 				<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
+						<h2>Image Backgrounds</h2>
+						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
+					</section>
+  					<section data-background-color="#000000">
+					</section>
+					</section> -->
+
+<!-- 				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
+					</p>
+					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
+				</section>
+
+				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
+					<h2>Background Transitions</h2>
+					<p>
+						You can override background transitions per-slide.
+					</p>
+					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
+				</section> -->
+
+<!-- 				<section>
+					<h2>Pretty Code</h2>
+					<pre><code class="hljs" data-trim contenteditable>
+						function linkify( selector ) {
+  							if( supports3DTransforms ) {
+    							var nodes = document.querySelectorAll( selector );
+    							for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
+      								var node = nodes[i];
+      								if( !node.className ) {
+        							node.className += ' roll';
+      								}
+    							}
+  							}
+						}
+					</code></pre>
+					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
+				</section> -->
+
+				<!-- <section>
+					<h2>Global State</h2>
+					<p>
+						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
+						will be added as a class to the document element when the slide is open. This lets you
+						apply broader style changes, like switching the page background.
+					</p>
+				</section>
+
+				<section data-state="customevent">
+					<h2>State Events</h2>
+					<p>
+						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
+					</p>
+					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
+						Reveal.addEventListener( 'customevent', function() {
+							console.log( '"customevent" has fired' );
+						});
+					</code></pre>
+				</section> -->
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
