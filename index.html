@@ -53,7 +53,6 @@
             <h2>Breve repaso histórico</h2>
             <p class="fragment fade-left"><strong>Mayo de 2009: </strong> Node.js es creado por <span><strong><a href="http://tinyclouds.org/">Ryan Dahl</a></strong><span>.</p>
               <aside class="notes">
-    						- NPM manager makes it easier for programmers to publish and share source code of Node.js libraries and is designed to simplify installation, updating and uninstallation of libraries.
                 - Due to the internal conflict over Joyent's governance, io.js was created as an open governance alternative with a separate technical committee.
               </aside>
   					<p class="fragment fade-left"><strong>8 de Noviembre del 2009: </strong><a href="https://www.youtube.com/embed/ztspvPYybIY">Presentación en la JsConf. <i class="em em-video_camera"></i></a></p>
@@ -136,6 +135,12 @@
             <h2>Single-threaded</h2>
             <p>Corre en un <strong class="keyword">único hilo de ejecución</strong>.</p>
           </section>
+          <section>
+            <h2>NPM</h2>
+            <p><strong class="keyword">Node Package Manager</strong>. Permite publicar y compartir código.</p>
+            <p>Diseñado para simplificar la instalación, actualización y desinstalación de librerías/módulos.</p>
+            <p class="fragment fade-left"><i class="em em-cat"></i>  Alternativa: <a href="https://code.facebook.com/posts/1840075619545360">Yarn</a></p>
+          </section>
         </section>
 
         <section data-transition="slide" data-background="#fff">
@@ -168,6 +173,13 @@
             <p>6. Desinstalar una versión específica de Node</p>
             <pre><code class="hljs">nvm uninstall &#60;node version&#62;</code></pre>
           </section>
+        </section>
+
+        <section data-background="#fff">
+          <h3>Nota:</h3>
+          <p>Al instalar <strong>Node.js</strong>, estamos también instalando <strong>NPM</strong>.</p>
+          <pre><code class="hljs">npm -v  // Verificar que NPM se encuentre instalado</code></pre>
+          <p>Node incluye funcionalidad por defecto a través de su <strong><a href="https://nodejs.org/api/">API</a><strong>.</p>
         </section>
 
 
