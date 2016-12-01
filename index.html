@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Node.js – Cómo usar JavaScript en todos lados</title>
+		<title>NodeJS – Cómo usar JavaScript en todos lados</title>
 
-		<meta name="description" content="Una introducción muy rápida a Node.js (lightning talk)">
+		<meta name="description" content="Una introducción muy rápida a NodeJS (lightning talk)">
 		<meta name="author" content="Nicolás Quiroz">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -41,8 +41,8 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Node.js</h1>
-					<h3> Cómo usar JavaScript <strong>en todos lados <img src="https://cdn.meme.am/cache/images/folder885/1121885.jpg"/></strong></h3>
+					<h1>NodeJS</h1>
+					<h3>Cómo usar JavaScript <strong>en todos lados <img src="https://cdn.meme.am/cache/images/folder885/1121885.jpg"/></strong></h3>
 					<p>
 						<small>Nicolás Quiroz / <a href="https://twitter.com/_nhsz">@_nhsz</a></small>
 					</p>
@@ -51,7 +51,7 @@
         <section data-transition="slide" data-background="#fff">
           <section>
             <h2>Breve repaso histórico</h2>
-            <p class="fragment fade-left"><strong>Mayo de 2009: </strong> Node.js es creado por <span><strong><a href="http://tinyclouds.org/">Ryan Dahl</a></strong><span>.</p>
+            <p class="fragment fade-left"><strong>Mayo de 2009: </strong> NodeJS es creado por <span><strong><a href="http://tinyclouds.org/">Ryan Dahl (1 año después de que Google liberara el <a href="https://chromium.googlesource.com/v8/v8.git">código de V8</a>)</a></strong><span>.</p>
               <aside class="notes">
                 - Due to the internal conflict over Joyent's governance, io.js was created as an open governance alternative with a separate technical committee.
               </aside>
@@ -63,14 +63,14 @@
           </section>
           <section>
             <p><strong>Diciembre de 2014: </strong>Fedor Indutny lanzó <strong><a href="https://iojs.org/">io.js</a></strong>, un fork de Node. Planeaban mantenerlo al día con las últimas features del engine V8 (por ejemplo, ES6).</p>
-            <p class="fragment fade-left"><strong>Febrero de 2015: </strong> Se comienza a discutir la necesidad de formar una fundación neutral para <strong>Node.js</strong>.</p>
-            <p class="fragment fade-left"><strong>Junio de 2015: </strong>Las comunidades de <strong>Node.js</strong> e <strong>io.js</strong> deciden trabajar juntas y nace la <strong><a href="https://nodejs.org/en/foundation/">Node.js Foundation.</a></strong></p>
-            <p class="fragment fade-left"><strong>Septiembre 2015: </strong><strong>Node.js v0.12</strong> e <strong>io.js v3.3</strong> se fusionan en <strong>Node v4.0</strong>. Esta release incluyó soporte para features de ES6 y dió inicio al ciclo de lanzamientos LTS.</p>
+            <p class="fragment fade-left"><strong>Febrero de 2015: </strong> Se comienza a discutir la necesidad de formar una fundación neutral para <strong>NodeJS</strong>.</p>
+            <p class="fragment fade-left"><strong>Junio de 2015: </strong>Las comunidades de <strong>NodeJS</strong> e <strong>io.js</strong> deciden trabajar juntas y nace la <strong><a href="https://nodejs.org/en/foundation/">NodeJS Foundation.</a></strong></p>
+            <p class="fragment fade-left"><strong>Septiembre 2015: </strong><strong>NodeJS v0.12</strong> e <strong>io.js v3.3</strong> se fusionan en <strong>Node v4.0</strong>. Esta release incluyó soporte para features de ES6 y dió inicio al ciclo de lanzamientos LTS.</p>
           </section>
 				</section>
 
         <section>
-					<h2>¿Qué es Node.js?</h2>
+					<h2>¿Qué es NodeJS?</h2>
 					<p class="fragment fade-left">No es un lenguaje nuevo.</p>
 					<p class="fragment fade-left">No es un framework.</p>
           <p class="fragment fade-left">No es una <s>librería</s> biblioteca de JavaScript.</p>
@@ -86,23 +86,23 @@
         <section>
 					<p>Según la web oficial (<a href="https://nodejs.org/es/">https://nodejs.org/es/</a>)</p>
 					<blockquote cite="https://nodejs.org/es/">
-						<p>Node.js® es un <strong class=keyword>entorno de ejecución para JavaScript</strong>, construido con el <strong class=keyword>motor de JavaScript V8</strong> de Chrome.</p>
+						<p>NodeJS® es un <strong class=keyword>entorno de ejecución para JavaScript</strong>, construido con el <strong class=keyword>motor de JavaScript V8</strong> de Chrome.</p>
             <p>Utiliza un modelo de operaciones <strong class=keyword>E/S sin bloqueo</strong> y <strong class=keyword>orientado a eventos</strong>, que lo hace liviano y eficiente.</p>
-            <p>El ecosistema de paquetes de Node.js, <strong class=keyword>npm</strong>, es el ecosistema mas grande de bibliotecas de código abierto en el mundo.</p>
+            <p>El ecosistema de paquetes de NodeJS, <strong class=keyword>npm</strong>, es el ecosistema mas grande de bibliotecas de código abierto en el mundo.</p>
 					</blockquote>
 				</section>
 
         <section data-background="http://www.reactiongifs.com/r/huh.gif"></section>
 
         <section>
-          <img src="http://i.imgur.com/WrZ6Dun.png" alt="Node.js joke" />
+          <img src="http://i.imgur.com/WrZ6Dun.png" alt="NodeJS joke" />
         </section>
 
         <section>
           <section>
             <h2>JavaScript Runtime Environment</h2>
             <p><strong class="keyword">Entorno de ejecución</strong>, desarrollado en C, C++ y JavaScript.</p>
-            <p>Antes de Node.js, JavaScript sólo podía ejecutarse del lado del cliente.</p>
+            <p>Antes de NodeJS, JavaScript sólo podía ejecutarse del lado del cliente.</p>
             <p>Se trata de una <strong class="keyword">tecnología disruptiva</strong>: JavaScript es el único lenguaje que puede utilizarse en todo el stack.</p>
           </section>
           <section>
@@ -119,8 +119,8 @@
             <p>La ejecución del código se realiza de forma asíncrona.</p>
               <aside class="notes">
                 - El enfoque tradicional para generar código asíncronico es engorroso y crea un espacio en memoria no trivial para un gran número de clientes (cada cliente genera un hilo, y el uso de memoria de cada uno se suma).
-                - Para evitar esta ineficiencia, así como la dificultad conocida de las aplicaciones basadas en hilos, Node.js mantiene un Event Loop que gestiona todas las operaciones asíncronas.
-                - Cuando una aplicación Node.js necesita realizar una operación de bloqueo (operaciones I/O como trabajo con archivos) envía una tarea asíncrona al event loop, junto con un callback, y luego continúa.
+                - Para evitar esta ineficiencia, así como la dificultad conocida de las aplicaciones basadas en hilos, NodeJS mantiene un Event Loop que gestiona todas las operaciones asíncronas.
+                - Cuando una aplicación NodeJS necesita realizar una operación de bloqueo (operaciones I/O como trabajo con archivos) envía una tarea asíncrona al event loop, junto con un callback, y luego continúa.
                 - Node resuelve este problema cambiando la forma en que se realiza una conexión con el servidor.
                 - En lugar de generar un nuevo hilo de OS para cada conexión (y de asignarle la memoria acompañante), cada conexión dispara una ejecución de evento dentro del proceso del motor de Node.
                 - Node también afirma que nunca se quedará en punto muerto, porque no se permiten bloqueos y porque no se bloquea directamente para llamados E/S.
@@ -137,10 +137,45 @@
           </section>
           <section>
             <h2>NPM</h2>
-            <p><strong class="keyword">Node Package Manager</strong>. Permite publicar y compartir código.</p>
+            <p><strong class="keyword">Node Package Manager</strong>. Permite publicar, compartir código y manejar
+              dependencias en los proyectos.</p>
             <p>Diseñado para simplificar la instalación, actualización y desinstalación de librerías/módulos.</p>
-            <p class="fragment fade-left"><i class="em em-cat"></i>  Alternativa: <a href="https://code.facebook.com/posts/1840075619545360">Yarn</a></p>
+            <p class="fragment fade-left"><i class="em em-cat"></i>  Cliente alternativo: <a href="https://code.facebook.com/posts/1840075619545360">Yarn</a></p>
           </section>
+          <section>
+            <p>Estas características hacen que <strong class="keyword">Node</strong> sea ideal para <strong class="keyword">aplicaciones web</strong>
+            de <strong class="keyword">alta performance, distribuídas, altamente escalables</strong> y <strong class="keyword">en tiempo real</strong>.</p>
+          </section>
+          <section>
+            <h2>Algunas empresas destacadas que usan Node</h2>
+            <p><strong class="keyword">LinkedIn</strong>. Backend de la aplicación mobile. Redujeron la cantidad de servidores necesarios de 15 a 4.</p>
+            <p><strong class="keyword">WalMart</strong>. Backend de la aplicación mobile.</p>
+            <p><strong class="keyword">Netflix</strong>.</p>
+            <p><strong class="keyword">Microsoft</strong>.</p>
+            <p><strong class="keyword">PayPal</strong>.</p>
+          </section>
+        </section>
+
+        <section data-transition="slide" data-background="#fff">
+          <h2>¿JavaScript en todos lados?</h2>
+          <div class="fragment fade-left">
+            <h3>Robotics & IoT Platforms</h3>
+            <a style="width: 580px" href="http://johnny-five.io/"><img src="https://html5experts.jp/wp-content/uploads/2015/11/arduino-loves-j5.png"/></a>
+            <a href="https://cylonjs.com/"><img src="https://camo.githubusercontent.com/3420092e29cad2a25520a3efd3c995a3ad22996f/687474703a2f2f692e696d6775722e636f6d2f553370614e68522e706e67"/></a>
+            <a href="https://tessel.io/"><img src="https://carlosazaustre.es/blog/content/images/2015/02/tessel-logo-horizontal_ci3qhl.png"/></a>
+          </div>
+        </section>
+
+        <section>
+          <h2>Sí, en todos lados</h2>
+          <a href="https://twitter.com/CollinEstes/status/738767017843515393">
+            <img src="http://blog-assets.risingstack.com/2016/Jun/node_js_examples_nasa_using_it_to_desing_spacewalks-1465910222073.png" />
+          </a>
+        </section>
+
+        <section>
+          <p>Básicamente, podemos correr <strong class="keyword">NodeJS</strong> en cualquier
+            sistema donde sea posible instalar <strong class="keyword">Linux</strong>.</p>
         </section>
 
         <section data-transition="slide" data-background="#fff">
@@ -177,7 +212,7 @@
 
         <section data-background="#fff">
           <h3>Nota:</h3>
-          <p>Al instalar <strong>Node.js</strong>, estamos también instalando <strong>NPM</strong>.</p>
+          <p>Al instalar <strong>NodeJS</strong>, estamos también instalando <strong>NPM</strong>.</p>
           <pre><code class="hljs">npm -v  // Verificar que NPM se encuentre instalado</code></pre>
           <p>Node incluye funcionalidad por defecto a través de su <strong><a href="https://nodejs.org/api/">API</a><strong>.</p>
         </section>
