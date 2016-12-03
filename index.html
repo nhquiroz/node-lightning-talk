@@ -5,7 +5,7 @@
 
 		<title>NodeJS – Cómo usar JavaScript en todos lados</title>
 
-		<meta name="description" content="Una introducción muy rápida a NodeJS (lightning talk)">
+		<meta name="description" content="Una introducción muy rápida a NodeJS">
 		<meta name="author" content="Nicolás Quiroz">
 
 		<meta name="apple-mobile-web-app-capable" content="yes">
@@ -43,32 +43,42 @@
 				<section>
 					<h1>NodeJS</h1>
 					<h3>Cómo usar JavaScript en todos lados</h3>
-					<img src="https://cdn.meme.am/cache/images/folder885/1121885.jpg"/>
+          			<img src="https://cdn.meme.am/cache/images/folder885/1121885.jpg"/>
 					<p>
 						<small>Nicolás Quiroz / <a href="https://twitter.com/_nhsz">@_nhsz</a></small>
 					</p>
 				</section>
 
+				<section>
+					<h2>Hola! <i class="em em-wave"></i></h2>
+					<p>Voy a hablar un poco sobre NodeJS.</p>
+					<ul>
+						<li>Historia</li>
+						<li>¿Qué es Node?</li>
+						<li>Un poco de código</li>
+					</ul>
+				</section>
+
         <section data-transition="slide" data-background="#fff">
           <section>
             <h2>Breve repaso histórico</h2>
-            <p class="fragment fade-left"><strong>Mayo de 2009: </strong> NodeJS es creado por <span><strong><a href="http://tinyclouds.org/">Ryan Dahl</a></strong> (1 año después de que Google liberara el <strong><a href="https://chromium.googlesource.com/v8/v8.git">código de V8</a></strong>)<span>.</p>
+            <p class="fragment fade-left"><strong>Mayo de 2009: </strong>NodeJS es creado por <span><strong><a href="http://tinyclouds.org/">Ryan Dahl</a></strong> (1 año después de que Google liberara el <strong><a href="https://chromium.googlesource.com/v8/v8.git">código de V8</a></strong>)<span>.</p>
               <aside class="notes">
                 - Due to the internal conflict over Joyent's governance, io.js was created as an open governance alternative with a separate technical committee.
               </aside>
   					<p class="fragment fade-left"><strong>8 de Noviembre del 2009: </strong><a href="https://www.youtube.com/embed/ztspvPYybIY">Presentación en la JsConf. <i class="em em-video_camera"></i></a></p>
             <p class="fragment fade-left"><strong>Enero de 2010: </strong>Nace <span><strong><a href="https://www.npmjs.com/">npm</a></strong></span>, el manejador de paquetes.</p>
             <p class="fragment fade-left"><strong>Julio de 2011: </strong>Primer release para Windows.</p>
-            <p class="fragment fade-left"><strong>Enero de 2012: </strong>Dahl da un paso al costado. <span><strong><a href="http://izs.me/">Isaac Schlueter</a></strong></span> (compañero de trabajo y creador de <span><strong>npm</strong></span>) se hace cargo.</p>
+            <p class="fragment fade-left"><strong>Enero de 2012: </strong>Ryan da un paso al costado. <span><strong><a href="http://izs.me/">Isaac Schlueter</a></strong></span> (compañero de trabajo y creador de <span><strong>npm</strong></span>) se hace cargo.</p>
             <p class="fragment fade-left"><strong>Enero de 2014: </strong>Timothy J. Fontaine toma el lugar de Isaac.</p>
           </section>
           <section>
             <p><strong>Diciembre de 2014: </strong>Fedor Indutny lanzó <strong><a href="https://iojs.org/">io.js</a></strong>, un fork de Node. Planeaban mantenerlo al día con las últimas features del engine V8 (por ejemplo, ES6).</p>
             <p class="fragment fade-left"><strong>Febrero de 2015: </strong> Se comienza a discutir la necesidad de formar una fundación neutral para <strong>NodeJS</strong>.</p>
             <p class="fragment fade-left"><strong>Junio de 2015: </strong>Las comunidades de <strong>NodeJS</strong> e <strong>io.js</strong> deciden trabajar juntas y nace la <strong><a href="https://nodejs.org/en/foundation/">NodeJS Foundation.</a></strong></p>
-            <p class="fragment fade-left"><strong>Septiembre 2015: </strong><strong>NodeJS v0.12</strong> e <strong>io.js v3.3</strong> se fusionan en <strong>Node v4.0</strong>. Esta release incluyó soporte para features de ES6 y dió inicio al ciclo de lanzamientos LTS.</p>
+            <p class="fragment fade-left"><strong>Septiembre 2015: </strong><strong>NodeJS v0.12</strong> e <strong>io.js v3.3</strong> se fusionan en <strong>Node v4.0</strong>. Esta release incluyó soporte para features de ES6 y dió inicio al ciclo de lanzamientos <strong>LTS</strong>.</p>
           </section>
-				</section>
+		  	</section>
 
         <section>
 					<h2>¿Qué es NodeJS?</h2>
@@ -79,9 +89,9 @@
 
         <section>
           <h2>tl;dr</h2>
-  				<p><i class="em em-computer"></i> Es un <em>entorno de ejecución</em> de <strong>JavaScript</strong> del lado del servidor.</p>
-          <p class="fragment fade-left">Permite ejecutar código JavaScript fuera del browser. <i class="em em-clap"></i></p>
-          <p class="fragment fade-left">Es <strong>Open Source. <i class="em em-smile"></i></strong></p>
+  				<p><i class="em em-computer"></i> Es un <strong class="keyword">entorno de ejecución de JavaScript</strong> del lado del servidor.</p>
+          <p class="fragment fade-left">Permite ejecutar código <strong class="keyword">JavaScript fuera del browser</strong>. <i class="em em-clap"></i></p>
+          <p class="fragment fade-left">Es <strong class="keyword">Open Source</strong>. <i class="em em-smile"></i></p>
   			</section>
 
         <section>
@@ -103,7 +113,7 @@
           <section>
             <h2>JavaScript Runtime Environment</h2>
             <p><strong class="keyword">Entorno de ejecución</strong>, desarrollado en C, C++ y JavaScript.</p>
-            <p>Antes de NodeJS, JavaScript sólo podía ejecutarse del lado del cliente.</p>
+            <p>Antes, JavaScript sólo podía ejecutarse del lado del cliente.</p>
             <p><strong class="keyword">Tecnología disruptiva</strong>: JavaScript es el único lenguaje que puede utilizarse en todo el stack.</p>
           </section>
           <section>
@@ -147,14 +157,6 @@
             <p>Estas características hacen que <strong class="keyword">Node</strong> sea ideal para <strong class="keyword">aplicaciones web</strong>
             de <strong class="keyword">alta performance, distribuídas, altamente escalables</strong> y <strong class="keyword">en tiempo real</strong>.</p>
           </section>
-          <section>
-            <h2>Algunas empresas destacadas que usan Node</h2>
-            <p><strong class="keyword">LinkedIn</strong>. Backend de la aplicación mobile. Redujeron la cantidad de servidores necesarios de 15 a 4.</p>
-            <p><strong class="keyword">WalMart</strong>. Backend de la aplicación mobile.</p>
-            <p><strong class="keyword">Netflix</strong>.</p>
-            <p><strong class="keyword">Microsoft</strong>.</p>
-            <p><strong class="keyword">PayPal</strong>.</p>
-          </section>
         </section>
 
         <section data-transition="slide" data-background="#fff">
@@ -187,100 +189,70 @@
           <h2>Instalación: <a href="https://github.com/creationix/nvm">nvm</a></h2>
           <p><strong class="keyword">Node Version Manager</strong>. Permite instalar y administrar múltiples versiones.</p>
           <section>
-            <p>1. <a href="https://github.com/creationix/nvm#install-script" alt="nvm Github project page">Instalar <strong>nvm</strong></a></p>
+            <p>1. <strong>Instalar</strong> <a href="https://github.com/creationix/nvm#install-script" alt="nvm Github project page"><strong>nvm</strong></a></p>
           </section>
           <section>
-            <p>2. Verificar que <strong>nvm</strong> está instalado correctamente</p>
-            <pre><code class="hljs">command -v nvm</code></pre>
+            <p>2. <strong>Verificar</strong> que <strong>nvm</strong> se instaló correctamente</p>
+            <pre><code class="sh">$ command -v nvm</code></pre>
           </section>
           <section>
-            <p>3. Instalar una versión específica de Node</p>
-            <pre><code class="hljs">nvm install &#60;node version&#62;</code></pre>
+            <p>3. <strong>Instalar</strong> una versión específica</p>
+            <pre><code class="sh">$ nvm install &#60;node version&#62;</code></pre>
           </section>
           <section>
-            <p>4. Listar las versiones de Node instaladas</p>
-            <pre><code class="hljs">nvm ls</code></pre>
+            <p>4. <strong>Listar</strong> las versiones instaladas</p>
+            <pre><code class="sh">$ nvm ls</code></pre>
           </section>
           <section>
-            <p>5. Elegir qué version usar</p>
-            <pre><code class="hljs">nvm use &#60;node version&#62;</code></pre>
+            <p>5. <strong>Elegir</strong> qué version usar</p>
+            <pre><code class="sh">$ nvm use &#60;node version&#62;</code></pre>
           </section>
           <section>
-            <p>6. Desinstalar una versión específica de Node</p>
-            <pre><code class="hljs">nvm uninstall &#60;node version&#62;</code></pre>
+            <p>6. <strong>Desinstalar</strong> una versión específica</p>
+            <pre><code class="sh">$ nvm uninstall &#60;node version&#62;</code></pre>
           </section>
         </section>
 
         <section data-transition="slide" data-background="#fff">
-          <h3>Nota:</h3>
+          <h3>Nota 1:</h3>
           <p>Al instalar <strong>NodeJS</strong>, estamos también instalando <strong>NPM</strong>.</p>
-          <pre><code class="hljs">npm -v  // Verificar que NPM se encuentre instalado</code></pre>
-          <p>Node incluye funcionalidad por defecto a través de su <strong><a href="https://nodejs.org/api/">API</a><strong>.</p>
+          <pre><code class="sh">$ npm -v  // Verificar que NPM se encuentre instalado</code></pre>
+          <h3 style="margin-top: 55px">Nota 2:</h3>
+          <p>Node incluye funcionalidad por defecto a través de su <strong><a href="https://nodejs.org/api/">API</a></strong>.</p>
         </section>
 
+        <section>
+          <p>Tenemos acceso a una interfaz <strong>REPL</strong>, tipeando el comando <pre><code class="sh">$ node</code></pre></p>
+          <p class="fragment fade-left">Ya podemos ejecutar JavaScript fuera del browser <i class="em em-grin"></i></p>
+        </section>
 
-<!-- 				<section data-background="https://s3.amazonaws.com/hakim-static/reveal-js/image-placeholder.png">
-						<h2>Image Backgrounds</h2>
-						<pre><code class="hljs">&lt;section data-background="image.png"&gt;</code></pre>
-					</section>
-  					<section data-background-color="#000000">
-					</section>
-					</section> -->
+        <section data-transition="slide" data-background="#fff">
+        	<h2>DEMO: HOLA <s>MUNDO</s> NODE</h2>
+        </section>
 
-<!-- 				<section data-transition="slide" data-background="#4d7e65" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						Different background transitions are available via the backgroundTransition option. This one's called "zoom".
-					</p>
-					<pre><code class="hljs">Reveal.configure({ backgroundTransition: 'zoom' })</code></pre>
-				</section>
+        <section data-transition="slide" data-background="#fff">
+        	<h2>DEMO: Usando NPM</h2>
+        </section>
 
-				<section data-transition="slide" data-background="#b5533c" data-background-transition="zoom">
-					<h2>Background Transitions</h2>
-					<p>
-						You can override background transitions per-slide.
-					</p>
-					<pre><code class="hljs" style="word-wrap: break-word;">&lt;section data-background-transition="zoom"&gt;</code></pre>
-				</section> -->
+        <section data-transition="slide" data-background="#fff">
+        	<h2>DEMO: Creando un Server</h2>
+        </section>
 
-<!-- 				<section>
-					<h2>Pretty Code</h2>
-					<pre><code class="hljs" data-trim contenteditable>
-						function linkify( selector ) {
-  							if( supports3DTransforms ) {
-    							var nodes = document.querySelectorAll( selector );
-    							for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      								var node = nodes[i];
-      								if( !node.className ) {
-        							node.className += ' roll';
-      								}
-    							}
-  							}
-						}
-					</code></pre>
-					<p>Code syntax highlighting courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section> -->
+        <section>
+        	<h3>Links recomendados</h3>
+        	<ul>
+        		<li><a href="https://nodeschool.io/">NodeSchool</a></li>
+        		<li><a href="https://github.com/maxogden/art-of-node#the-art-of-node">The Art of Node</a></li>
+        		<li><a href="http://www.nodebeginner.org/">Node Beginner Book</a></li>
+        		<li><a href="https://github.com/sindresorhus/awesome-nodejs">awesome-nodejs</a></li>
+        		<li><a href="https://www.quora.com/Who-is-Ryan-Dahl">Who is Ryan Dahl?</a></li>
+        	</ul>
+        </section>
 
-				<!-- <section>
-					<h2>Global State</h2>
-					<p>
-						Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-						will be added as a class to the document element when the slide is open. This lets you
-						apply broader style changes, like switching the page background.
-					</p>
-				</section>
+        <section>
+        	<h1>Gracias! <i class="em em-tada"></i></h1>
+        </section>
 
-				<section data-state="customevent">
-					<h2>State Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code class="javascript" data-trim contenteditable style="font-size: 18px;">
-						Reveal.addEventListener( 'customevent', function() {
-							console.log( '"customevent" has fired' );
-						});
-					</code></pre>
-				</section> -->
 			</div>
 		</div>
 
