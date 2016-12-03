@@ -49,10 +49,13 @@
 					</p>
 				</section>
 
-				<section>
+				<section data-transition="slide" data-background="#fff">
 					<h2>Hola! <i class="em em-wave"></i></h2>
-					<p>Voy a hablar un poco sobre NodeJS.</p>
-					<ul>
+          <div>
+					  <p>Voy a hablar un poco sobre</p>
+            <img style="border: 0px solid #0000" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Node.js_logo_2015.svg" />
+          </div>
+					<ul style="margin-top: 30px">
 						<li>Historia</li>
 						<li>¿Qué es Node?</li>
 						<li>Un poco de código</li>
@@ -140,7 +143,9 @@
           </section>
           <section>
             <h2>Non-blocking I/O</h2>
-            <p>Completar.</p>
+            <p><strong class="keyword">Las operaciones de I/O</strong> (abrir/cerrar/leer/escribir archivos, etc)
+              <strong class="keyword">no son bloqueantes</strong>.</p>
+            <img style="width: 30%" src="http://s2.quickmeme.com/img/69/69b4f60e06997f65e2d30a5d06f4161d0b0587b296646e96ebd993bd122bea4b.jpg" />
           </section>
           <section>
             <h2>Single-threaded</h2>
@@ -163,9 +168,9 @@
           <h2>¿JavaScript en todos lados?</h2>
           <div class="fragment fade-left">
             <h3>Robotics & IoT Platforms</h3>
-            <a style="width: 580px" href="http://johnny-five.io/"><img src="https://html5experts.jp/wp-content/uploads/2015/11/arduino-loves-j5.png"/></a>
-            <a href="https://cylonjs.com/"><img src="https://camo.githubusercontent.com/3420092e29cad2a25520a3efd3c995a3ad22996f/687474703a2f2f692e696d6775722e636f6d2f553370614e68522e706e67"/></a>
-            <a href="https://tessel.io/"><img src="https://carlosazaustre.es/blog/content/images/2015/02/tessel-logo-horizontal_ci3qhl.png"/></a>
+            <a style="width: 580px" href="http://johnny-five.io/"><img style="border: 0px solid #0000" src="https://html5experts.jp/wp-content/uploads/2015/11/arduino-loves-j5.png"/></a>
+            <a href="https://cylonjs.com/"><img style="border: 0px solid #0000" src="https://camo.githubusercontent.com/3420092e29cad2a25520a3efd3c995a3ad22996f/687474703a2f2f692e696d6775722e636f6d2f553370614e68522e706e67"/></a>
+            <a href="https://tessel.io/"><img style="border: 0px solid #0000" src="https://carlosazaustre.es/blog/content/images/2015/02/tessel-logo-horizontal_ci3qhl.png"/></a>
           </div>
         </section>
 
@@ -186,14 +191,18 @@
         </section>
 
         <section>
-          <h2>Instalación: <a href="https://github.com/creationix/nvm">nvm</a></h2>
+          <h2>Instalación: nvm</h2>
           <p><strong class="keyword">Node Version Manager</strong>. Permite instalar y administrar múltiples versiones.</p>
           <section>
             <p>1. <strong>Instalar</strong> <a href="https://github.com/creationix/nvm#install-script" alt="nvm Github project page"><strong>nvm</strong></a></p>
           </section>
           <section>
             <p>2. <strong>Verificar</strong> que <strong>nvm</strong> se instaló correctamente</p>
-            <pre><code class="sh">$ command -v nvm</code></pre>
+            <pre><code class="sh">
+            $ command -v nvm
+            $ nvm
+            $ nvm --version
+            </code></pre>
           </section>
           <section>
             <p>3. <strong>Instalar</strong> una versión específica</p>
@@ -230,12 +239,62 @@
         	<h2>DEMO: HOLA <s>MUNDO</s> NODE</h2>
         </section>
 
+        <section>
+          <pre><code class="js">
+          $ node
+          > console.log('Hola Node')
+          Hola Node
+          undefined
+          </code></pre>
+        </section>
+
         <section data-transition="slide" data-background="#fff">
         	<h2>DEMO: Usando NPM</h2>
         </section>
 
+        <section>
+          <p>Ejemplo: <a href="https://www.npmjs.com/package/chalk">chalk</a></p>
+          <pre><code>
+          $ npm install --save chalk
+          </code></pre>
+          <aside class="notes">
+            npm install --save chalk (--save para agregarlo al package json y mantenerlo actualizado)
+            NPM va a crear node_modules/ en el root de nuestro proyecto y cuando hagamos NPM install, va a leer el archivo package.json e instalar todas las dependencias necesarias (las que requerimos con require) para ejecutar el proyecto
+            con npm list puedo ver todas las dependencias instaladas en mi proyecto
+            // Obtengo una referencia a la librería var chalk = require('chalk');
+            // Configuro los colores var rojo = chalk.bold.red; var verde = chalk.bold.green;
+            // Uso los colores console.log(rojo('Un error ha ocurrido')); console.log(verde('Aqui puedo informar del resultado de una operacion'));
+            (ver API) chalk.green(Acamica); chalk.blue(Node);
+            npm uninstall --save chalk para remover dependencias que ya no utilizo
+          </aside>
+        </section>
+
+        <section>
+          <pre><code class="js">
+          chalk = require('chalk')
+
+          var redColor = chalk.bold.red
+          var greenColor = chalk.bold.green
+
+          console.log(redColor('ERROR!'))
+          console.log(greenColor('Todo OK :)'))
+          </code></pre>
+        </section>
+
         <section data-transition="slide" data-background="#fff">
         	<h2>DEMO: Creando un Server</h2>
+        </section>
+
+        <section>
+          <pre><code class="js">
+          var http = require("http");
+
+          http.createServer(function(request, response) {
+            response.writeHead(200, {"Content-Type": "text/html"});
+            response.write('The server is running OK');
+            response.end();
+          }).listen(8888);
+          </code></pre>
         </section>
 
         <section>
