@@ -43,17 +43,15 @@
 				<section>
 					<h1>NodeJS</h1>
 					<h3>Cómo usar JavaScript en todos lados</h3>
-          			<img src="https://cdn.meme.am/cache/images/folder885/1121885.jpg"/>
-					<p>
-						<small>Nicolás Quiroz / <a href="https://twitter.com/_nhsz">@_nhsz</a></small>
-					</p>
+          			<img style ="-webkit-box-shadow: none" src="images/js-all-the-things.png "/>
+					<p style="font-size: 0.7em">Nicolás Quiroz / <a href="https://twitter.com/_nhsz">@_nhsz</a></p>
 				</section>
 
 				<section data-transition="slide" data-background="#fff">
 					<h2>Hola! <i class="em em-wave"></i></h2>
           <div>
 					  <p>Voy a hablar un poco sobre</p>
-            <img style="border: 0px solid #0000" src="https://upload.wikimedia.org/wikipedia/commons/7/7e/Node.js_logo_2015.svg" />
+            <img style ="-webkit-box-shadow: none" src="images/node-logo.png" />
           </div>
 					<ul style="margin-top: 30px">
 						<li>Historia</li>
@@ -63,23 +61,43 @@
 				</section>
 
         <section data-transition="slide" data-background="#fff">
+          <h2>Breve repaso histórico</h2>
           <section>
-            <h2>Breve repaso histórico</h2>
-            <p class="fragment fade-left"><strong>Mayo de 2009: </strong>NodeJS es creado por <span><strong><a href="http://tinyclouds.org/">Ryan Dahl</a></strong> (1 año después de que Google liberara el <strong><a href="https://chromium.googlesource.com/v8/v8.git">código de V8</a></strong>)<span>.</p>
+            <p><strong>Mayo de 2009: </strong>NodeJS es creado por <span><strong><a href="http://tinyclouds.org/">Ryan Dahl</a></strong> (1 año después de que Google liberara el <strong><a href="https://chromium.googlesource.com/v8/v8.git">código de V8</a></strong>)<span>.</p>
               <aside class="notes">
                 - Due to the internal conflict over Joyent's governance, io.js was created as an open governance alternative with a separate technical committee.
               </aside>
-  					<p class="fragment fade-left"><strong>8 de Noviembre del 2009: </strong><a href="https://www.youtube.com/embed/ztspvPYybIY">Presentación en la JsConf. <i class="em em-video_camera"></i></a></p>
-            <p class="fragment fade-left"><strong>Enero de 2010: </strong>Nace <span><strong><a href="https://www.npmjs.com/">npm</a></strong></span>, el manejador de paquetes.</p>
-            <p class="fragment fade-left"><strong>Julio de 2011: </strong>Primer release para Windows.</p>
-            <p class="fragment fade-left"><strong>Enero de 2012: </strong>Ryan da un paso al costado. <span><strong><a href="http://izs.me/">Isaac Schlueter</a></strong></span> (compañero de trabajo y creador de <span><strong>npm</strong></span>) se hace cargo.</p>
-            <p class="fragment fade-left"><strong>Enero de 2014: </strong>Timothy J. Fontaine toma el lugar de Isaac.</p>
+            </p>
+          </section>
+          <section>
+  				  <p><strong>Noviembre del 2009: </strong><a href="https://www.youtube.com/embed/ztspvPYybIY">Presentación en la JsConf. <i class="em em-video_camera"></i></a></p>
+          </section>
+          <section>
+            <p><strong>Enero de 2010: </strong>Nace <span><strong><a href="https://www.npmjs.com/">npm</a></strong></span>, el manejador de paquetes.</p>
+          </section>
+          <section>
+            <p><strong>Julio de 2011: </strong>Primer release para Windows.</p>
+          </section>
+          <section>
+            <p><strong>Enero de 2012: </strong>Ryan da un paso al costado. <span><strong><a href="http://izs.me/">Isaac Schlueter</a></strong></span> (compañero de trabajo y creador de <span><strong>npm</strong></span>) se hace cargo.</p>
+          </section>
+          <section>
+            <p><strong>Enero de 2014: </strong>Timothy J. Fontaine toma el lugar de Isaac.</p>
           </section>
           <section>
             <p><strong>Diciembre de 2014: </strong>Fedor Indutny lanzó <strong><a href="https://iojs.org/">io.js</a></strong>, un fork de Node. Planeaban mantenerlo al día con las últimas features del engine V8 (por ejemplo, ES6).</p>
-            <p class="fragment fade-left"><strong>Febrero de 2015: </strong> Se comienza a discutir la necesidad de formar una fundación neutral para <strong>NodeJS</strong>.</p>
-            <p class="fragment fade-left"><strong>Junio de 2015: </strong>Las comunidades de <strong>NodeJS</strong> e <strong>io.js</strong> deciden trabajar juntas y nace la <strong><a href="https://nodejs.org/en/foundation/">NodeJS Foundation.</a></strong></p>
-            <p class="fragment fade-left"><strong>Septiembre 2015: </strong><strong>NodeJS v0.12</strong> e <strong>io.js v3.3</strong> se fusionan en <strong>Node v4.0</strong>. Esta release incluyó soporte para features de ES6 y dió inicio al ciclo de lanzamientos <strong>LTS</strong>.</p>
+          </section>
+          <section>
+            <p><strong>Febrero de 2015: </strong> Se comienza a discutir la necesidad de formar una fundación neutral para <strong>NodeJS</strong>.</p>
+          </section>
+          <section>
+            <p><strong>Junio de 2015: </strong>Las comunidades de <strong>NodeJS</strong> e <strong>io.js</strong> deciden trabajar juntas y nace la <strong><a href="https://nodejs.org/en/foundation/">NodeJS Foundation.</a></strong></p>
+          </section>
+          <section>
+            <p><strong>Septiembre 2015: </strong><strong>NodeJS v0.12</strong> e <strong>io.js v3.3</strong> se fusionan en <strong>Node v4.0</strong>. Esta release incluyó soporte para features de ES6 y dió inicio al ciclo de lanzamientos <strong>LTS</strong>.</p>
+            <aside class="notes">
+              In Node.js the stable versions with long-term support (LTS) are the ones starting with even numbers (4, 6, 8 ...) and the experimental version are the odd numbers (5, 7 ...). We recommend you to use the LTS version in production and try out new things with the experimental one.
+            </aside>
           </section>
 		  	</section>
 
@@ -91,13 +109,6 @@
 				</section>
 
         <section>
-          <h2>tl;dr</h2>
-  				<p><i class="em em-computer"></i> Es un <strong class="keyword">entorno de ejecución de JavaScript</strong> del lado del servidor.</p>
-          <p class="fragment fade-left">Permite ejecutar código <strong class="keyword">JavaScript fuera del browser</strong>. <i class="em em-clap"></i></p>
-          <p class="fragment fade-left">Es <strong class="keyword">Open Source</strong>. <i class="em em-smile"></i></p>
-  			</section>
-
-        <section>
 					<p>Según la web oficial (<a href="https://nodejs.org/es/">https://nodejs.org/es/</a>)</p>
 					<blockquote cite="https://nodejs.org/es/">
 						<p>NodeJS® es un <strong class=keyword>entorno de ejecución para JavaScript</strong>, construido con el <strong class=keyword>motor de JavaScript V8</strong> de Chrome.</p>
@@ -106,18 +117,17 @@
 					</blockquote>
 				</section>
 
-        <section data-background="http://www.reactiongifs.com/r/huh.gif"></section>
-
-        <section>
-          <img src="http://i.imgur.com/WrZ6Dun.png" alt="NodeJS joke" />
-        </section>
+        <section data-background="images/louis-confused.gif"></section>
 
         <section>
           <section>
             <h2>JavaScript Runtime Environment</h2>
-            <p><strong class="keyword">Entorno de ejecución</strong>, desarrollado en C, C++ y JavaScript.</p>
+            <p><strong class="keyword">Entorno de ejecución</strong>.</p>
+              <aside class="notes">
+                (C, C++ y JavaScript)
+              </aside>
             <p>Antes, JavaScript sólo podía ejecutarse del lado del cliente.</p>
-            <p><strong class="keyword">Tecnología disruptiva</strong>: JavaScript es el único lenguaje que puede utilizarse en todo el stack.</p>
+            <p>Es el único lenguaje que puede utilizarse en todo el stack.</p>
           </section>
           <section>
             <h2>V8 JavaScript engine</h2>
@@ -130,59 +140,128 @@
           <section>
             <h2>Event-driven</h2>
             <p><strong class="keyword">Basado en eventos</strong>.</p>
-            <p>La ejecución del código se realiza de forma asíncrona.</p>
+            <p>La ejecución del código se realiza de forma asincrónica.</p>
               <aside class="notes">
+                Node.js works in this same asynchronous way. It uses a function called the Event Loop that ensures that data isn’t constantly being queried for, but simply transmitted when it exists. It’s kind of like a holding cell for communication. So while the Event Loop is handling asynchronous tasks, Node,js can continue running the program normally and leave out the heavy lifting. It makes Node.js very good at idling when there’s nothing to do, instead of constantly querying for more information.
+                This means that developers can use Node.js to build applications that scale to millions of users. Real time communication is managed by the event loop without taking up much memory, so developers can spend more time working on the functionality of the app than they might spend worrying about the app getting clogged with too many queries.
                 - El enfoque tradicional para generar código asíncronico es engorroso y crea un espacio en memoria no trivial para un gran número de clientes (cada cliente genera un hilo, y el uso de memoria de cada uno se suma).
                 - Para evitar esta ineficiencia, así como la dificultad conocida de las aplicaciones basadas en hilos, NodeJS mantiene un Event Loop que gestiona todas las operaciones asíncronas.
                 - Cuando una aplicación NodeJS necesita realizar una operación de bloqueo (operaciones I/O como trabajo con archivos) envía una tarea asíncrona al event loop, junto con un callback, y luego continúa.
                 - Node resuelve este problema cambiando la forma en que se realiza una conexión con el servidor.
                 - En lugar de generar un nuevo hilo de OS para cada conexión (y de asignarle la memoria acompañante), cada conexión dispara una ejecución de evento dentro del proceso del motor de Node.
                 - Node también afirma que nunca se quedará en punto muerto, porque no se permiten bloqueos y porque no se bloquea directamente para llamados E/S.
-                - Su meta es permitir a un programador construir aplicaciones altamente escalables y escribir código que maneje decenas de miles de conexiones simultáneas en una sólo una máquina física.
+
               </aside>
           </section>
           <section>
             <h2>Non-blocking I/O</h2>
             <p><strong class="keyword">Las operaciones de I/O</strong> (abrir/cerrar/leer/escribir archivos, etc)
               <strong class="keyword">no son bloqueantes</strong>.</p>
-            <img style="width: 30%" src="http://s2.quickmeme.com/img/69/69b4f60e06997f65e2d30a5d06f4161d0b0587b296646e96ebd993bd122bea4b.jpg" />
+            <img style="-webkit-box-shadow: none" src="images/node-philosoraptor.png" />
           </section>
           <section>
             <h2>Single-threaded</h2>
             <p>Corre en un <strong class="keyword">único hilo de ejecución</strong>.</p>
           </section>
           <section>
+            <h2>Event Loop</h2>
+            <img style="-webkit-box-shadow: none; border: none" src="images/node-event-loop.png" />
+            <aside class="notes">
+              A typical experience at a restaurant would be something like this:
+
+You sit at a table and the server grabs your drink order.
+The server goes back to the bar and passes your order to a bartender.
+While the bartender is working on your drink, the server moves on to grab another table’s drink order.
+The server goes back to the bar and passes along the other table’s order.
+Before the server brings back your drinks, you order some food.
+Server passes your food order to the kitchen.
+Your drinks are ready now, so the server picks them up and brings them back to your table.
+The other table’s drinks are ready, so the server picks them up and takes them to the other table.
+Finally your food is ready, so server picks it up and brings it back to your table.
+Basically every interaction with the server follows the same pattern. First, you order something. Then, the server goes on to process your order and return it to you when it’s ready.
+
+Once the order is handed off to the bar or kitchen, the server is free to get new orders or to deliver previous orders that are completed. Notice that at no point in time is the server doing more than one thing. They can only process one request at a time.  This is how non-blocking Node.js applications work.
+
+In Node, your application code is like a restaurant server processing orders, and the bar/kitchen is the operating system handling your I/O calls.
+
+Your single-threaded JavaScript application is responsible for all the processing up to the moment it requires I/O. Then, it hands the work off to the operating system which takes care of processing the rest.
+            <aside>
+          </section>
+          <section>
             <h2>NPM</h2>
             <p><strong class="keyword">Node Package Manager</strong>. Permite publicar, compartir código y manejar
-              dependencias en los proyectos.</p>
-            <p>Diseñado para simplificar la instalación, actualización y desinstalación de librerías/módulos.</p>
+              dependencias.</p>
+            <p>Simplifica la instalación, actualización y desinstalación de módulos.</p>
+            <aside class="notes">
+              Consejos para elegir modulos: fijarse que sean populares, que se actualicen seguido, invesgitar GitHub (stars, followers, actividad)
+            </aside>
             <p class="fragment fade-left"><i class="em em-cat"></i>  Cliente alternativo: <a href="https://code.facebook.com/posts/1840075619545360">Yarn</a></p>
+          </section>
+          <section>
+            <h2>Open Source <i class="em em-smile"></i></h2>
           </section>
           <section>
             <p>Estas características hacen que <strong class="keyword">Node</strong> sea ideal para <strong class="keyword">aplicaciones web</strong>
             de <strong class="keyword">alta performance, distribuídas, altamente escalables</strong> y <strong class="keyword">en tiempo real</strong>.</p>
+            <aside class="notes">
+              In the old days, the Internet used to be about consumption.
+              Users would passively read, watch and download content. Chat was done on message boards or blogs, not in real time.
+              But as social media has increased in popularity, today’s users want to be able to receive instantaneous feedback over the Web.
+              Chatting, gaming and collaboration now take place in real time.
+              Even more significantly, this is happening on an imposing scale with up to millions of users interacting on one site at one time.
+              Software developers know the Web wasn’t built for this.
+              Real-time response means that each users’ client would be constantly querying the server, making for sluggish, inefficient response times.
+
+              To make the Web responsive, communications can’t start from the client side.
+              Instead, servers need to push data to clients instead, and only when there is data to push.
+              If they’re constantly pushing data, it’ll be an equally tedious process.
+              See also: Wait, What’s Node.js Good For Again?
+              This is what Node.js does. Node.js runs JavaScript by leveraging V8, Google’s fast JavaScript engine designed for Chrome.
+              This allows Node.js to create a runtime environment that pushes JavaScript from the server to the client quickly.
+              V8 translates JavaScript into native machine language, instead of working overtime to interpret it as bytecode, giving Node.js its speed.
+              This speed, combined with asynchronous programming, are the twin powerhouses that make Node.js so responsive.
+
+              Ryan Dahl, inventor of Node.js, said he was first inspired to create the framework in 2009 after watching a loading bar on Flickr.
+              The site kept querying the server in order to display how much had downloaded.
+              Dahl thought it’d be faster if the server pushed updates to the client without the client having to begin every query.
+
+              In other words, human communication isn’t like a programming language.
+              It happens chaotically, out of sync, and it isn’t parallel—I don’t have to wait for you to reply before I can talk again.
+
+              “Node.js is not a silver-bullet new platform that will dominate the web development world. Instead, it’s a platform that fills a particular need.
+              Where Node really shines is in building fast, scalable network applications.”
+            </aside>
           </section>
         </section>
+
+        <section>
+          <img style ="-webkit-box-shadow: none" src="images/node-twitter-joke.png" alt="NodeJS joke" />
+        </section>
+
+        <section>
+          <h2>tl;dr</h2>
+  				<p><i class="em em-computer"></i> Es un <strong class="keyword">entorno de ejecución de JavaScript</strong> del lado del servidor.</p>
+          <p class="fragment fade-left">Permite ejecutar código <strong class="keyword">JavaScript fuera del browser</strong>. <i class="em em-clap"></i></p>
+  			</section>
 
         <section data-transition="slide" data-background="#fff">
           <h2>¿JavaScript en todos lados?</h2>
           <div class="fragment fade-left">
-            <h3>Robotics & IoT Platforms</h3>
-            <a style="width: 580px" href="http://johnny-five.io/"><img style="border: 0px solid #0000" src="https://html5experts.jp/wp-content/uploads/2015/11/arduino-loves-j5.png"/></a>
-            <a href="https://cylonjs.com/"><img style="border: 0px solid #0000" src="https://camo.githubusercontent.com/3420092e29cad2a25520a3efd3c995a3ad22996f/687474703a2f2f692e696d6775722e636f6d2f553370614e68522e706e67"/></a>
-            <a href="https://tessel.io/"><img style="border: 0px solid #0000" src="https://carlosazaustre.es/blog/content/images/2015/02/tessel-logo-horizontal_ci3qhl.png"/></a>
+            <a style="width: 580px" href="http://johnny-five.io/"><img style ="-webkit-box-shadow: none" src="images/node-johnny-five.png"/></a>
+            <a href="https://cylonjs.com/"><img style ="-webkit-box-shadow: none" src="images/node-cylonjs.png"/></a>
+            <a href="https://tessel.io/"><img style ="-webkit-box-shadow: none" src="images/node-tessel.png"/></a>
           </div>
         </section>
 
         <section>
           <h2>Sí, en todos lados</h2>
-          <a href="https://twitter.com/CollinEstes/status/738767017843515393">
-            <img src="http://blog-assets.risingstack.com/2016/Jun/node_js_examples_nasa_using_it_to_desing_spacewalks-1465910222073.png" />
+          <a href="images/node-nasa.png">
+            <img style ="-webkit-box-shadow: none" src="http://blog-assets.risingstack.com/2016/Jun/node_js_examples_nasa_using_it_to_desing_spacewalks-1465910222073.png" />
           </a>
         </section>
 
         <section>
-          <p>Básicamente, podemos correr <strong class="keyword">NodeJS</strong> en cualquier
+          <p>Podemos correr <strong class="keyword">NodeJS</strong> en cualquier
             sistema donde sea posible instalar <strong class="keyword">Linux</strong>.</p>
         </section>
 
@@ -197,10 +276,13 @@
           <h2>Instalación: nvm</h2>
           <p><strong class="keyword">Node Version Manager</strong>. Permite instalar y administrar múltiples versiones.</p>
           <section>
-            <p>1. <strong>Instalar</strong> <a href="https://github.com/creationix/nvm#install-script" alt="nvm Github project page"><strong>nvm</strong></a></p>
+            <p><strong>Instalar</strong> <a href="https://github.com/creationix/nvm#install-script" alt="nvm Github project page"><strong>nvm</strong></a></p>
+            <aside class="notes">
+              nvm for windows https://github.com/coreybutler/nvm-windows
+            </aside>
           </section>
           <section>
-            <p>2. <strong>Verificar</strong> que <strong>nvm</strong> se instaló correctamente</p>
+            <p><strong>Verificar</strong> que <strong>nvm</strong> se instaló correctamente</p>
             <pre><code class="sh">
             $ command -v nvm
             $ nvm
@@ -208,19 +290,23 @@
             </code></pre>
           </section>
           <section>
-            <p>3. <strong>Instalar</strong> una versión específica</p>
+            <p><strong>Instalar</strong> una versión específica</p>
             <pre><code class="sh">$ nvm install &#60;node version&#62;</code></pre>
           </section>
           <section>
-            <p>4. <strong>Listar</strong> las versiones instaladas</p>
+            <p><strong>Chequear</strong> que Node está instalado</p>
+            <pre><code class="sh">$ node --version</code></pre>
+          </section>
+          <section>
+            <p><strong>Listar</strong> las versiones instaladas</p>
             <pre><code class="sh">$ nvm ls</code></pre>
           </section>
           <section>
-            <p>5. <strong>Elegir</strong> qué version usar</p>
+            <p><strong>Elegir</strong> qué version usar</p>
             <pre><code class="sh">$ nvm use &#60;node version&#62;</code></pre>
           </section>
           <section>
-            <p>6. <strong>Desinstalar</strong> una versión específica</p>
+            <p><strong>Desinstalar</strong> una versión específica</p>
             <pre><code class="sh">$ nvm uninstall &#60;node version&#62;</code></pre>
           </section>
         </section>
@@ -229,17 +315,29 @@
           <h3>Nota 1:</h3>
           <p>Al instalar <strong>NodeJS</strong>, estamos también instalando <strong>NPM</strong>.</p>
           <pre><code class="sh">$ npm -v  // Verificar que NPM se encuentre instalado</code></pre>
+        </section>
+
+        <section data-transition="slide" data-background="#fff">
           <h3 style="margin-top: 55px">Nota 2:</h3>
           <p>Node incluye funcionalidad por defecto a través de su <strong><a href="https://nodejs.org/api/">API</a></strong>.</p>
         </section>
 
         <section>
-          <p>Tenemos acceso a una interfaz <strong>REPL</strong>, tipeando el comando <pre><code class="sh">$ node</code></pre></p>
+          <h3>Ok, ya instalamos Node. ¿Y ahora?</h3>
+          <p class="fragment fade-left">Tenemos acceso a una interfaz <strong>REPL</strong>.</p>
+          <pre class="fragment fade-left"><code class="sh ">$ node</code></pre>
           <p class="fragment fade-left">Ya podemos ejecutar JavaScript fuera del browser <i class="em em-grin"></i></p>
+          <aside class="notes">
+            objeto global:
+            browser - window
+            node - global
+            browser: tied to HTML document (document)
+            node: tied to process (process)
+          </aside>
         </section>
 
         <section data-transition="slide" data-background="#fff">
-        	<h2>DEMO: HOLA <s>MUNDO</s> NODE</h2>
+        	<p style="font-size: 2.15em"><strong>DEMO:</strong> Hola <s>Mundo</s> Node</p>
         </section>
 
         <section>
@@ -252,12 +350,12 @@
         </section>
 
         <section data-transition="slide" data-background="#fff">
-        	<h2>DEMO: Usando NPM</h2>
+        	<p style="font-size: 2.15em"><strong>DEMO:</strong> Usando NPM</p>
         </section>
 
         <section>
           <p>Ejemplo: <a href="https://www.npmjs.com/package/chalk">chalk</a></p>
-          <pre><code>
+          <pre><code class="sh">
           $ npm install --save chalk
           </code></pre>
           <aside class="notes">
@@ -274,10 +372,10 @@
 
         <section>
           <pre><code class="js">
-          chalk = require('chalk')
+          var chalk = require('chalk')
 
-          var redColor = chalk.bold.red
-          var greenColor = chalk.bold.green
+          var redColor = chalk.red.bold
+          var greenColor = chalk.green.bold
 
           console.log(redColor('ERROR!'))
           console.log(greenColor('Todo OK :)'))
@@ -285,18 +383,18 @@
         </section>
 
         <section data-transition="slide" data-background="#fff">
-        	<h2>DEMO: Creando un Server</h2>
+        	<p style="font-size: 2.15em"><strong>DEMO:</strong> Creando un Server</p>
         </section>
 
         <section>
           <pre><code class="js">
-          var http = require("http");
+          var http = require('http')
 
-          http.createServer(function(request, response) {
-            response.writeHead(200, {"Content-Type": "text/html"});
-            response.write('The server is running OK');
-            response.end();
-          }).listen(8888);
+          http.createServer(function (request, response) {
+            response.writeHead(200, {'Content-Type': 'text/html'})
+            response.write('The server is running OK')
+            response.end()
+          }).listen(8888)
           </code></pre>
         </section>
 
@@ -304,9 +402,7 @@
         	<h3>Links recomendados</h3>
         	<ul>
         		<li><a href="https://nodeschool.io/">NodeSchool</a></li>
-        		<li><a href="https://github.com/maxogden/art-of-node#the-art-of-node">The Art of Node</a></li>
         		<li><a href="http://www.nodebeginner.org/">Node Beginner Book</a></li>
-        		<li><a href="https://github.com/sindresorhus/awesome-nodejs">awesome-nodejs</a></li>
         		<li><a href="https://www.quora.com/Who-is-Ryan-Dahl">Who is Ryan Dahl?</a></li>
         	</ul>
         </section>
